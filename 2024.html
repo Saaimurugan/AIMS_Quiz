@@ -102,381 +102,1446 @@
 
     <script>
       const quizData = [
-      {
-        "question": "What is the primary function of the R console?",
-        "options": ["To execute SQL queries", "To perform calculations and execute R scripts", "To visualize data in charts", "To manage files and directories"],
-        "correctAnswer": "To perform calculations and execute R scripts"
-      },
-      {
-        "question": "Which of the following is NOT a built-in data type in R?",
-        "options": ["Vector", "List", "Tuple", "Matrix"],
-        "correctAnswer": "Tuple"
-      },
-      {
-        "question": "How can you install a new R package?",
-        "options": ["install.package(\"pkgname\")", "install(\"pkgname\")", "require(\"pkgname\")", "library(pkgname)"],
-        "correctAnswer": "install.packages(\"pkgname\")"
-      },
-      {
-        "question": "Which operator is used to compare if two values are equal in R?",
-        "options": ["=", "==", "!=", "<"],
-        "correctAnswer": "=="
-      },
-      {
-        "question": "What is the function of the data.frame() function in R?",
-        "options": ["To create a matrix", "To create a list", "To create a table-like structure with columns of different types", "To create a vector"],
-        "correctAnswer": "To create a table-like structure with columns of different types"
-      },
-      {
-        "question": "Which of the following statements is true about R vectors?",
-        "options": ["They can only contain numeric values.", "They can contain elements of different data types.", "They can contain elements of only one data type.", "They are similar to Python dictionaries."],
-        "correctAnswer": "They can contain elements of only one data type."
-      },
-      {
-        "question": "To read a CSV file into R, which function is typically used?",
-        "options": ["read.csv()", "read.table()", "read_excel()", "import.csv()"],
-        "correctAnswer": "read.csv()"
-      },
-      {
-        "question": "What does the summary() function provide when used on a data frame?",
-        "options": ["A detailed view of all functions in the data frame", "Summary statistics for each column in the data frame", "A list of all column names", "A graphical representation of the data"],
-        "correctAnswer": "Summary statistics for each column in the data frame"
-      },
-      {
-        "question": "What is the purpose of the R library() function?",
-        "options": ["To load installed packages into the R session", "To create a new package", "To save the current workspace", "To update existing packages"],
-        "correctAnswer": "To load installed packages into the R session"
-      },
-      {
-        "question": "Which of the following R operators is used for element-wise multiplication of vectors?",
-        "options": ["*", "%*%", "&", "|"],
-        "correctAnswer": "*"
-      },
-      {
-        "question": "In R, a list can contain elements of different data types.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "The install.packages() function is used to load a package that is already installed.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "R data frames can only contain numeric data.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "You can edit a data file directly from the R console using the edit() function.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "Logical operators in R include && and ||.",
-				"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "Which function in R is used to create a vector?",
-        "options": ["vector()", "c()", "create_vector()", "list()"],
-        "correctAnswer": "c()"
-      },
-      {
-        "question": "What does the `length()` function return when applied to a vector?",
-        "options": ["The number of elements in the vector", "The sum of all elements", "The mean of the elements", "The type of the vector"],
-        "correctAnswer": "The number of elements in the vector"
-      },
-      {
-        "question": "Which function is used to compute the mean of a numeric vector?",
-        "options": ["median()", "mean()", "sum()", "mode()"],
-        "correctAnswer": "mean()"
-      },
-      {
-        "question": "What does the `sd()` function calculate in R?",
-        "options": ["Variance", "Standard deviation", "Mean", "Median"],
-        "correctAnswer": "Standard deviation"
-      },
-      {
-        "question": "Which function can be used to apply a function to each element of a list or vector?",
-        "options": ["apply()", "lapply()", "sapply()", "tapply()"],
-        "correctAnswer": "lapply()"
-      },
-      {
-        "question": "How can you create a user-defined function in R?",
-        "options": ["function_name() {}", "def function_name() {}", "function() {}", "create_function() {}"],
-        "correctAnswer": "function() {}"
-      },
-      {
-        "question": "Which function is used to apply a function to rows or columns of a matrix?",
-        "options": ["apply()", "lapply()", "sapply()", "mapply()"],
-        "correctAnswer": "apply()"
-      },
-      {
-        "question": "In R, what does the `summary()` function provide for a vector of numerical data?",
-        "options": ["Detailed description of each element", "Summary statistics including min, max, mean, median, and quartiles", "Only the mean and median", "A graphical plot of the data"],
-        "correctAnswer": "Summary statistics including min, max, mean, median, and quartiles"
-      },
-      {
-        "question": "What does the `var()` function compute for a numeric vector?",
-        "options": ["Mean", "Variance", "Standard deviation", "Median"],
-        "correctAnswer": "Variance"
-      },
-      {
-        "question": "Which function would you use to find the range (difference between max and min) of a numeric vector?",
-        "options": ["range()", "diff()", "max() - min()", "summary()"],
-        "correctAnswer": "max() - min()"
-      },
-      {
-        "question": "True or False: The `mean()` function can be used to calculate the median of a vector.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "True or False: The `lapply()` function returns a list after applying a function to each element.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: `apply()` can be used to operate on the rows or columns of a data frame.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: The `sd()` function calculates the variance of a numeric vector.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "True or False: You can create a vector using the `list()` function.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
     {
-        "question": "Which function in base R is used to create a pie chart?",
-        "options": ["barplot()", "hist()", "pie()", "boxplot()"],
-        "correctAnswer": "pie()"
-      },
-      {
-        "question": "Which function is used to create a histogram in R?",
-        "options": ["hist()", "barplot()", "plot()", "scatterplot()"],
-        "correctAnswer": "hist()"
-      },
-      {
-        "question": "What does a box plot primarily show?",
-        "options": ["The distribution of a dataset, including the median and quartiles", "The correlation between two variables", "The frequency of different categories", "The trend over time"],
-        "correctAnswer": "The distribution of a dataset, including the median and quartiles"
-      },
-      {
-        "question": "Which function is used to create a scatter plot in base R?",
-        "options": ["barplot()", "plot()", "hist()", "pie()"],
-        "correctAnswer": "plot()"
-      },
-      {
-        "question": "To add a straight line to a scatter plot in base R, which function is commonly used?",
-        "options": ["abline()", "lines()", "curve()", "plot()"],
-        "correctAnswer": "abline()"
-      },
-      {
-        "question": "What is the purpose of using a frequency polygon?",
-        "options": ["To show the cumulative frequency distribution", "To display the frequency of different categories", "To show the distribution of continuous data points", "To compare frequencies of multiple categories"],
-        "correctAnswer": "To show the distribution of continuous data points"
-      },
-      {
-        "question": "Which function is used to fit a linear regression model in R?",
-        "options": ["lm()", "glm()", "fit()", "regression()"],
-        "correctAnswer": "lm()"
-      },
-      {
-        "question": "What does the correlation coefficient measure?",
-        "options": ["The mean of a dataset", "The strength and direction of a linear relationship between two variables", "The spread of data around the mean", "The variance of a dataset"],
-        "correctAnswer": "The strength and direction of a linear relationship between two variables"
-      },
-      {
-        "question": "Which function in R would you use to display a box plot?",
-        "options": ["boxplot()", "hist()", "plot()", "pie()"],
-        "correctAnswer": "boxplot()"
-      },
-      {
-        "question": "To predict values using a linear regression model, which function is used in R?",
-        "options": ["predict()", "forecast()", "regress()", "estimate()"],
-        "correctAnswer": "predict()"
-      },
-      {
-        "question": "True or False: A bar chart is useful for comparing frequencies of different categories.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: A histogram is used to display the distribution of a single continuous variable.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: The pie() function can be used to create a bar chart.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "True or False: In a scatter plot, the plot() function can be used to display the relationship between two numeric variables.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: A frequency polygon can be used to compare the distribution of multiple datasets.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-     {
-        "question": "Which function is used to create a matrix in R?",
-        "options": ["matrix()", "array()", "data.frame()", "mat()"],
-        "correctAnswer": "matrix()"
-      },
-      {
-        "question": "How do you bind two matrices row-wise in R?",
-        "options": ["cbind()", "rbind()", "bind_rows()", "merge()"],
-        "correctAnswer": "rbind()"
-      },
-      {
-        "question": "Which function calculates the inverse of a matrix in R?",
-        "options": ["inverse()", "inv()", "solve()", "det()"],
-        "correctAnswer": "solve()"
-      },
-      {
-        "question": "What does the decompose() function do in R?",
-        "options": ["Decomposes a matrix into its singular value decomposition", "Decomposes a matrix into its eigenvalues and eigenvectors", "Decomposes a matrix into lower and upper triangular matrices", "Decomposes a matrix into a list of vectors"],
-        "correctAnswer": "Decomposes a matrix into lower and upper triangular matrices"
-      },
-      {
-        "question": "Which package is commonly used for data manipulation with data frames in R?",
-        "options": ["data.table", "ggplot2", "dplyr", "reshape2"],
-        "correctAnswer": "dplyr"
-      },
-      {
-        "question": "What does the select() function do in dplyr?",
-        "options": ["Selects rows from a data frame", "Selects columns from a data frame", "Selects a subset of a data frame based on a condition", "Selects unique values from a data frame"],
-        "correctAnswer": "Selects columns from a data frame"
-      },
-      {
-        "question": "Which function in dplyr is used to filter rows based on a condition?",
-        "options": ["filter()", "select()", "mutate()", "arrange()"],
-        "correctAnswer": "filter()"
-      },
-      {
-        "question": "In ggplot2, which function is used to create a scatter plot?",
-        "options": ["geom_point()", "geom_bar()", "geom_histogram()", "geom_boxplot()"],
-        "correctAnswer": "geom_point()"
-      },
-      {
-        "question": "Which function in ggplot2 is used to add a regression line to a scatter plot?",
-        "options": ["geom_line()", "geom_smooth()", "geom_abline()", "geom_curve()"],
-        "correctAnswer": "geom_smooth()"
-      },
-      {
-        "question": "How do you specify the x and y aesthetics in ggplot2?",
-        "options": ["aes(x, y)", "ggplot(x, y)", "plot(x, y)", "geom(x, y)"],
-        "correctAnswer": "aes(x, y)"
-      },
-      {
-        "question": "True or False: The rbind() function can be used to combine matrices column-wise.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "True or False: The solve() function in R can be used to find the determinant of a matrix.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "True or False: The mutate() function in dplyr is used to add or modify columns in a data frame.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: ggplot2 is a package used for creating static data visualizations in R.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: The bind_rows() function in dplyr combines data frames by columns.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-     {
-        "question": "Which function is commonly used for detecting outliers in a numeric vector in R?",
-        "options": ["boxplot()", "mean()", "sd()", "scale()"],
-        "correctAnswer": "boxplot()"
-      },
-      {
-        "question": "What function in R is used to handle missing values by replacing them with the mean of the column?",
-        "options": ["na.omit()", "replace_na()", "mean()", "impute()"],
-        "correctAnswer": "replace_na()"
-      },
-      {
-        "question": "Which function can be used to scale data to have zero mean and unit variance in R?",
-        "options": ["scale()", "normalize()", "standardize()", "center()"],
-        "correctAnswer": "scale()"
-      },
-      {
-        "question": "What is the purpose of a for loop in R?",
-        "options": ["To iterate over a sequence of values and execute a block of code", "To conditionally execute a block of code", "To define a function", "To create a data frame"],
-        "correctAnswer": "To iterate over a sequence of values and execute a block of code"
-      },
-      {
-        "question": "Which function is used to check a condition and execute code accordingly in R?",
-        "options": ["ifelse()", "loop()", "iterate()", "case_when()"],
-        "correctAnswer": "ifelse()"
-      },
-      {
-        "question": "What is the primary function of the `shiny` package in R?",
-        "options": ["To create interactive web applications", "To perform statistical analysis", "To build machine learning models", "To manage data frames"],
-        "correctAnswer": "To create interactive web applications"
-      },
-      {
-        "question": "Which function is used to run a Shiny app in R?",
-        "options": ["runApp()", "startApp()", "launchApp()", "openApp()"],
-        "correctAnswer": "runApp()"
-      },
-      {
-        "question": "What is a key feature of the `ui` component in a Shiny app?",
-        "options": ["It defines the user interface and layout", "It handles server-side computations", "It manages the database connection", "It processes user input data"],
-        "correctAnswer": "It defines the user interface and layout"
-      },
-      {
-        "question": "Which function is used to build a custom package in R?",
-        "options": ["package_skeleton()", "create_package()", "build_package()", "new_package()"],
-        "correctAnswer": "package_skeleton()"
-      },
-      {
-        "question": "Which file in an R package contains the package documentation and description?",
-        "options": ["DESCRIPTION", "NAMESPACE", "README.md", "R/"],
-        "correctAnswer": "DESCRIPTION"
-      },
-      {
-        "question": "True or False: The `boxplot()` function can help identify outliers in data.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: The `scale()` function standardizes data to have a mean of 0 and a standard deviation of 1.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      },
-      {
-        "question": "True or False: The `ifelse()` function can only be used in for loops.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "True or False: Shiny web apps can only be created using pre-built templates.",
-		"options": ["True", "False"],
-        "correctAnswer": "False"
-      },
-      {
-        "question": "True or False: The `runApp()` function is used to start a Shiny application.",
-		"options": ["True", "False"],
-        "correctAnswer": "True"
-      }
+        "question": "Source-Govind: What is the primary focus of ISO 19011:2018?",
+        "options": [
+            "Environmental management systems",
+            "Quality management systems",
+            "Guidelines for auditing management systems",
+            "Risk management systems"
+        ],
+        "correctAnswer": "Guidelines for auditing management systems"
+    },
+    {
+        "question": "Source-Govind: Which of the following is a key benefit of implementing ISO 19011:2018?",
+        "options": [
+            "Improved consistency and effectiveness of audits",
+            "Guaranteed certification to ISO 9001",
+            "Elimination of all audit risks",
+            "Reduced need for auditor training"
+        ],
+        "correctAnswer": "Improved consistency and effectiveness of audits"
+    },
+    {
+        "question": "Source-Govind: What does ISO 19011:2018 define as the 'extent to which audit criteria are fulfilled'?",
+        "options": [
+            "Audit objective",
+            "Audit scope",
+            "Audit conclusion",
+            "Audit finding"
+        ],
+        "correctAnswer": "Audit finding"
+    },
+    {
+        "question": "Source-Govind: Which of the following is NOT a type of audit program described in ISO 19011:2018?",
+        "options": [
+            "Internal audit program",
+            "External audit program",
+            "Combined audit program",
+            "Joint audit program"
+        ],
+        "correctAnswer": "Internal audit program"
+    },
+    {
+        "question": "Source-Govind: What is the purpose of an audit plan according to ISO 19011:2018?",
+        "options": [
+            "To define the audit objectives and scope",
+            "To assign roles and responsibilities to the audit team",
+            "To establish the audit schedule and resources",
+            "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+    },
+    {
+        "question": "Source-Govind: Which of the following is NOT a responsibility of the audit team leader?",
+        "options": [
+            "Planning the audit",
+            "Implementing corrective actions",
+            "Leading the audit team",
+            "Communicating with the auditee"
+        ],
+        "correctAnswer": "Implementing corrective actions"
+    },
+    {
+        "question": "Source-Govind: What is the purpose of conducting an audit opening meeting?",
+        "options": [
+            "To introduce the audit team",
+            "To confirm the audit plan",
+            "To establish communication channels",
+            "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+    },
+    {
+        "question": "Source-Govind: What is an audit finding according to ISO 19011:2018?",
+        "options": [
+            "Results of the evaluation of the collected audit evidence against audit criteria",
+            "Nonconformity identified during the audit",
+            "Observation made during the audit",
+            "Conclusion of the audit"
+        ],
+        "correctAnswer": "Results of the evaluation of the collected audit evidence against audit criteria"
+    },
+    {
+        "question": "Source-Govind: What is the purpose of an audit report?",
+        "options": [
+            "To document the audit findings",
+            "To communicate the audit conclusions",
+            "To provide recommendations for improvement",
+            "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+    },
+    {
+        "question": "Source-Govind: Which of the following is NOT a type of audit follow-up activity?",
+        "options": [
+            "Conducting a re-audit",
+            "Verifying the implementation of corrective actions",
+            "Monitoring the effectiveness of corrective actions",
+            "Reviewing the audit report"
+        ],
+        "correctAnswer": "Conducting a re-audit"
+    },
+    {
+        "question": "Source-Govind: What is the purpose of auditing management systems?",
+        "options": [
+            "To ensure compliance with legal requirements",
+            "To improve the effectiveness of the management system",
+            "To provide assurance to stakeholders",
+            "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+    },
+    {
+        "question": "Source-Govind: What is the difference between an audit program and an audit plan?",
+        "options": [
+            "An audit program sets out arrangements for a set of audits, while an audit plan deals with a single audit.",
+            "An audit plan sets out arrangements for a set of audits, while an audit program deals with a single audit.",
+            "An audit program is more detailed than an audit plan.",
+            "An audit plan is more detailed than an audit program."
+        ],
+        "correctAnswer": "An audit program sets out arrangements for a set of audits, while an audit plan deals with a single audit."
+    },
+    {
+        "question": "Source-Govind: What is meant by 'audit criteria' in ISO 19011:2018?",
+        "options": [
+            "The objectives of the audit",
+            "The standards or requirements against which the auditee's management system is being assessed",
+            "The qualifications of the audit team",
+            "The methods used to collect audit evidence"
+        ],
+        "correctAnswer": "The standards or requirements against which the auditee's management system is being assessed"
+    },
+    {
+        "question": "Source-Govind: What is the role of the auditee in the audit process?",
+        "options": [
+            "To passively observe the audit",
+            "To obstruct the audit team",
+            "To provide access to information and resources needed for the audit",
+            "To dictate the audit plan"
+        ],
+        "correctAnswer": "To provide access to information and resources needed for the audit"
+    },
+    {
+        "question": "Source-Govind: Which of the following is an example of audit evidence?",
+        "options": [
+            "Interviews with personnel",
+            "Review of documents",
+            "Observation of activities",
+            "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+    },
+    {
+        "question": "Source-Govind: What is the purpose of evaluating audit findings?",
+        "options": [
+            "To determine the cause of nonconformities",
+            "To assess the risk associated with nonconformities",
+            "To determine the need for corrective action",
+            "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+    },
+    {
+        "question": "Source-Govind: ISO 19011:2018 emphasizes the importance of ______ in auditing.",
+        "options": [
+            "Risk-based thinking",
+            "Cost-benefit analysis",
+            "Statistical sampling",
+            "Checklist-based approaches"
+        ],
+        "correctAnswer": "Risk-based thinking"
+    },
+    {
+        "question": "Source-Govind: What is a 'combined audit'?",
+        "options": [
+            "An audit conducted by a single auditor",
+            "An audit of two or more management systems together.",
+            "An audit conducted by internal and external auditors together.",
+            "An audit that combines different audit methods."
+        ],
+        "correctAnswer": "An audit of two or more management systems together."
+    },
+    {
+        "question": "Source-Govind: Which of the following is NOT a potential benefit of conducting audits?",
+        "options": [
+            "Improved organizational performance",
+            "Increased customer satisfaction",
+            "Reduced costs",
+            "Guaranteed elimination of all risks"
+        ],
+        "correctAnswer": "Guaranteed elimination of all risks"
+    },
+    {
+        "question": "Source-Govind: When should an audit be conducted?",
+        "options": [
+            "Only when there is a problem",
+            "At regularly planned intervals",
+            "When requested by a customer",
+            "b and c"
+        ],
+        "correctAnswer": "At regularly planned intervals"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is the primary purpose of ISO/IEC 42001:2023?",
+        "options": [
+            "To provide guidelines for information security",
+            "To establish an AI management system",
+            "To standardize quality management",
+            "To manage environmental risk in AI"
+        ],
+        "correctAnswer": "To establish an AI management system"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011:2018, what is a 'combined audit'?",
+        "options": [
+            "An audit conducted by multiple teams",
+            "An audit of multiple management systems together",
+            "An audit using both internal and external auditors",
+            "An audit done for separate entities"
+        ],
+        "correctAnswer": "An audit of multiple management systems together"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which concept is emphasized as crucial in ISO 42001 for AI system implementation?",
+        "options": [
+            "Risk-based thinking",
+            "External auditing",
+            "Market competitiveness",
+            "Technical specifications"
+        ],
+        "correctAnswer": "Risk-based thinking"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011:2018, which of the following is a primary principle of auditing?",
+        "options": [
+            "Confidentiality",
+            "Resource allocation",
+            "Automation",
+            "Cost analysis"
+        ],
+        "correctAnswer": "Confidentiality"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO/IEC 42001 requires organizations to consider what when establishing an AI management system?",
+        "options": [
+            "Legal constraints only",
+            "Stakeholder needs and objectives",
+            "Data quantity over quality",
+            "Employee turnover"
+        ],
+        "correctAnswer": "Stakeholder needs and objectives"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001:2023, who is responsible for establishing the AI policy?",
+        "options": [
+            "The governing body",
+            "Top management",
+            "The audit team leader",
+            "External auditors"
+        ],
+        "correctAnswer": "Top management"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is a key responsibility of the audit program manager in ISO 19011:2018?",
+        "options": [
+            "Reviewing financial impacts of audits",
+            "Identifying risks and opportunities in the audit program",
+            "Hiring external audit consultants",
+            "Setting legal requirements"
+        ],
+        "correctAnswer": "Identifying risks and opportunities in the audit program"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is 'AI system impact assessment' according to ISO 42001?",
+        "options": [
+            "Evaluation of AI system's technical efficiency",
+            "Assessment of an AI system's impact on stakeholders",
+            "Audit of financial sustainability",
+            "Analysis of external data sources"
+        ],
+        "correctAnswer": "Assessment of an AI system's impact on stakeholders"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011:2018 introduces which approach as crucial for auditing?",
+        "options": [
+            "Quantitative analysis",
+            "Risk-based approach",
+            "Predictive modeling",
+            "AI integration"
+        ],
+        "correctAnswer": "Risk-based approach"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, what is a fundamental aspect of the AI management system?",
+        "options": [
+            "AI algorithm transparency",
+            "Fixed stakeholder objectives",
+            "Non-adjustable goals",
+            "Continual improvement"
+        ],
+        "correctAnswer": "Continual improvement"
+    },
+    {
+        "question": "Source-ChatGPT4o: What does ISO 19011:2018 recommend for managing audit evidence?",
+        "options": [
+            "Storing in physical copies only",
+            "Using random sampling methods",
+            "Verifying relevance to audit criteria",
+            "Ignoring non-digital sources"
+        ],
+        "correctAnswer": "Verifying relevance to audit criteria"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which document structure is commonly followed in ISO management standards to aid consistency?",
+        "options": [
+            "Hierarchical structure",
+            "Harmonized structure",
+            "Sequential structure",
+            "Segmented structure"
+        ],
+        "correctAnswer": "Harmonized structure"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 42001:2023, which group is identified as potentially responsible for overseeing AI impacts?",
+        "options": [
+            "AI auditors",
+            "Interested parties",
+            "Governing body",
+            "All employees"
+        ],
+        "correctAnswer": "Governing body"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is the main focus of ISO 19011:2018?",
+        "options": [
+            "Conducting risk analysis",
+            "Guidelines for auditing management systems",
+            "Implementation of financial audits",
+            "Evaluating AI technologies"
+        ],
+        "correctAnswer": "Guidelines for auditing management systems"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, which element is essential in an AI policy?",
+        "options": [
+            "Commitment to meet applicable requirements",
+            "Only financial performance goals",
+            "Strict adherence to national regulations",
+            "Focus solely on marketing objectives"
+        ],
+        "correctAnswer": "Commitment to meet applicable requirements"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which of the following is a recommended action in ISO 42001 for addressing AI risks?",
+        "options": [
+            "Establishing risk-based thinking",
+            "Increasing workforce capacity",
+            "Focusing on short-term solutions",
+            "Reducing data collection"
+        ],
+        "correctAnswer": "Establishing risk-based thinking"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, what role does 'fair presentation' play in auditing?",
+        "options": [
+            "Ensuring accuracy of audit reports",
+            "Reducing audit duration",
+            "Enforcing legal compliance",
+            "Enhancing company branding"
+        ],
+        "correctAnswer": "Ensuring accuracy of audit reports"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001:2023 mandates what for AI-related objectives?",
+        "options": [
+            "Alignment with organizational policies",
+            "Compliance with public opinion",
+            "Constant external validation",
+            "Exclusive focus on resource conservation"
+        ],
+        "correctAnswer": "Alignment with organizational policies"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011, what should an auditor avoid to maintain independence?",
+        "options": [
+            "Multiple audit tasks",
+            "Bias and conflict of interest",
+            "Performing virtual audits",
+            "Following the audit scope"
+        ],
+        "correctAnswer": "Bias and conflict of interest"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is a recommended resource for an AI management system in ISO 42001?",
+        "options": [
+            "Dedicated training programs",
+            "Automated audit report generators",
+            "Exclusive reliance on AI tools",
+            "Focus on non-digital resources"
+        ],
+        "correctAnswer": "Dedicated training programs"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, which principle supports the transparency of audit findings?",
+        "options": [
+            "Risk-based approach",
+            "Integrity",
+            "Privacy",
+            "Evidence-based approach"
+        ],
+        "correctAnswer": "Evidence-based approach"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which is a recommended practice in ISO 42001 for monitoring AI performance?",
+        "options": [
+            "Eliminating external feedback",
+            "Using only qualitative analysis",
+            "Continuous performance evaluation",
+            "Minimizing scope of audit"
+        ],
+        "correctAnswer": "Continuous performance evaluation"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 specifies the use of what in audits to aid in consistency?",
+        "options": [
+            "Standardized audit criteria",
+            "Flexible guidelines only",
+            "Non-comparative tools",
+            "Limited evidence sources"
+        ],
+        "correctAnswer": "Standardized audit criteria"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is an organization's primary goal when applying ISO 42001's risk management approach?",
+        "options": [
+            "Minimizing audit complexity",
+            "Ensuring safe and ethical AI use",
+            "Enhancing operational complexity",
+            "Achieving rapid technological advancement"
+        ],
+        "correctAnswer": "Ensuring safe and ethical AI use"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, which principle ensures auditors act impartially?",
+        "options": [
+            "Independence",
+            "Flexibility",
+            "Reliability",
+            "Efficiency"
+        ],
+        "correctAnswer": "Independence"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is ISO 42001’s guidance on AI data quality?",
+        "options": [
+            "Using only high-resolution data",
+            "Meeting organization’s data requirements",
+            "Focus on data privacy exclusively",
+            "Applying only external data sources"
+        ],
+        "correctAnswer": "Meeting organization’s data requirements"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011, what type of information should audit reports provide?",
+        "options": [
+            "Summaries of all non-related audits",
+            "Detailed non-audit findings",
+            "Accurate audit conclusions",
+            "Only quantitative audit results"
+        ],
+        "correctAnswer": "Accurate audit conclusions"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is the purpose of 'continual improvement' in ISO 42001's AI management?",
+        "options": [
+            "Increasing complexity",
+            "Ongoing enhancement of AI processes",
+            "Focus on immediate corrective actions",
+            "Reducing compliance needs"
+        ],
+        "correctAnswer": "Ongoing enhancement of AI processes"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 recommends which of the following for auditor evaluation?",
+        "options": [
+            "Informal discussions",
+            "Formal competence criteria",
+            "Peer observation",
+            "Random sampling"
+        ],
+        "correctAnswer": "Formal competence criteria"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which is a priority in establishing the scope of the AI management system according to ISO 42001?",
+        "options": [
+            "Minimizing legal compliance",
+            "Defining boundaries and applicability",
+            "Focusing on financial output",
+            "Eliminating all AI risks"
+        ],
+        "correctAnswer": "Defining boundaries and applicability"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, which document is central to audit planning?",
+        "options": [
+            "Audit scope",
+            "Audit criteria",
+            "Audit plan",
+            "Audit notes"
+        ],
+        "correctAnswer": "Audit plan"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 42001, which element is crucial for addressing AI risks effectively?",
+        "options": [
+            "AI transparency and clarity",
+            "Effective risk treatment processes",
+            "Complex AI algorithms",
+            "Automated decision making"
+        ],
+        "correctAnswer": "Effective risk treatment processes"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011, which factor is essential for maintaining audit objectivity?",
+        "options": [
+            "External audits only",
+            "Independence of auditors",
+            "Managerial oversight",
+            "Minimizing evidence collection"
+        ],
+        "correctAnswer": "Independence of auditors"
+    },
+    {
+        "question": "Source-ChatGPT4o: What does ISO 42001 consider a necessary component in the AI policy?",
+        "options": [
+            "Commitment to transparency",
+            "Focus on revenue growth",
+            "Flexible regulations",
+            "Public stakeholder involvement"
+        ],
+        "correctAnswer": "Commitment to transparency"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 suggests which approach to effectively manage audit risks?",
+        "options": [
+            "Random risk assessment",
+            "Structured risk-based approach",
+            "Ad hoc risk treatment",
+            "Infrequent risk monitoring"
+        ],
+        "correctAnswer": "Structured risk-based approach"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 42001, which type of assessment evaluates AI impact on stakeholders?",
+        "options": [
+            "AI system impact assessment",
+            "Audit conclusion analysis",
+            "Risk prioritization assessment",
+            "Impact effectiveness review"
+        ],
+        "correctAnswer": "AI system impact assessment"
+    },
+    {
+        "question": "Source-ChatGPT4o: What role does 'due professional care' play in auditing per ISO 19011?",
+        "options": [
+            "Minimizing audit time",
+            "Enhancing audit consistency",
+            "Ensuring diligence and accuracy",
+            "Avoiding detailed reporting"
+        ],
+        "correctAnswer": "Ensuring diligence and accuracy"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 suggests AI risk management should be integrated with:",
+        "options": [
+            "Marketing plans",
+            "Business processes",
+            "Only financial operations",
+            "Supply chain management"
+        ],
+        "correctAnswer": "Business processes"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 outlines the primary objective of audit reporting as:",
+        "options": [
+            "Generating insights",
+            "Ensuring strict compliance",
+            "Documenting audit findings and conclusions",
+            "Increasing audit complexity"
+        ],
+        "correctAnswer": "Documenting audit findings and conclusions"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which of these is essential to ISO 42001’s AI management approach?",
+        "options": [
+            "Adaptability to organization objectives",
+            "Limiting internal reviews",
+            "Exclusive focus on external data",
+            "Fixed objectives regardless of context"
+        ],
+        "correctAnswer": "Adaptability to organization objectives"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 promotes which technique for audit planning?",
+        "options": [
+            "Ignoring smaller risks",
+            "Sampling critical information",
+            "Eliminating subjective analysis",
+            "Enforcing only quantitative measures"
+        ],
+        "correctAnswer": "Sampling critical information"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, who has the responsibility to support AI policy adherence?",
+        "options": [
+            "Top management",
+            "Third-party consultants",
+            "Only external auditors",
+            "Marketing department"
+        ],
+        "correctAnswer": "Top management"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 emphasizes the use of which kind of evidence?",
+        "options": [
+            "Non-verifiable only",
+            "Objective and verifiable evidence",
+            "Only subjective assessments",
+            "Direct interview records"
+        ],
+        "correctAnswer": "Objective and verifiable evidence"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which is a core goal of continual improvement in ISO 42001?",
+        "options": [
+            "Increasing AI risks",
+            "Reducing stakeholder involvement",
+            "Enhancing AI management system effectiveness",
+            "Standardizing all AI practices"
+        ],
+        "correctAnswer": "Enhancing AI management system effectiveness"
+    },
+    {
+        "question": "Source-ChatGPT4o: What does ISO 19011 list as a key requirement for an effective audit program?",
+        "options": [
+            "External audit involvement",
+            "Competent auditors",
+            "Single standard application",
+            "Reduced audit scope"
+        ],
+        "correctAnswer": "Competent auditors"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, what should be considered when defining the AI scope?",
+        "options": [
+            "Legal constraints",
+            "Interested party expectations",
+            "All of the above",
+            "Only internal requirements"
+        ],
+        "correctAnswer": "All of the above"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which of the following defines a ‘combined audit’ in ISO 19011?",
+        "options": [
+            "Audit done for a single system",
+            "Audit combining two or more management systems",
+            "Audit conducted by multiple auditors",
+            "Multiple audits by a single auditor"
+        ],
+        "correctAnswer": "Audit combining two or more management systems"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is the ISO 42001 guidance on AI-related documentation?",
+        "options": [
+            "Use limited documented information",
+            "Documentation should be updated and controlled",
+            "No emphasis on documentation",
+            "Exclude external data sources"
+        ],
+        "correctAnswer": "Documentation should be updated and controlled"
+    },
+    {
+        "question": "Source-ChatGPT4o: What principle in ISO 19011 emphasizes the need for secure information handling?",
+        "options": [
+            "Fair presentation",
+            "Confidentiality",
+            "Risk-based thinking",
+            "Evidence-based approach"
+        ],
+        "correctAnswer": "Confidentiality"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 identifies which process as essential for managing AI risk?",
+        "options": [
+            "Training program evaluation",
+            "AI risk assessment",
+            "Internal audit planning",
+            "Elimination of minor risks"
+        ],
+        "correctAnswer": "AI risk assessment"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 requires that audit teams possess what skill for success?",
+        "options": [
+            "Comprehensive technical knowledge",
+            "Effective communication skills",
+            "Subjective judgement",
+            "Directorial oversight"
+        ],
+        "correctAnswer": "Effective communication skills"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, the AI management system must focus on:",
+        "options": [
+            "Aligning with organizational purpose",
+            "Reducing transparency",
+            "Limiting stakeholder access",
+            "Avoiding all legal considerations"
+        ],
+        "correctAnswer": "Aligning with organizational purpose"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which of the following is recommended in ISO 19011 for audit program management?",
+        "options": [
+            "Maximizing complexity",
+            "Setting clear objectives",
+            "Focusing only on financial audits",
+            "Assigning one auditor per program"
+        ],
+        "correctAnswer": "Setting clear objectives"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 42001, who should define roles and responsibilities for AI risk management?",
+        "options": [
+            "Only external auditors",
+            "Top management",
+            "IT department",
+            "AI system end-users"
+        ],
+        "correctAnswer": "Top management"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 recommends what for preparing an effective audit plan?",
+        "options": [
+            "Using historical data exclusively",
+            "Setting objectives, scope, and criteria",
+            "Reducing criteria to save time",
+            "Focusing on single data sources"
+        ],
+        "correctAnswer": "Setting objectives, scope, and criteria"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is a primary benefit of ISO 42001’s continual improvement focus?",
+        "options": [
+            "Enhanced regulatory challenges",
+            "Minimized AI system risks",
+            "Increased system complexity",
+            "Financial gains exclusively"
+        ],
+        "correctAnswer": "Minimized AI system risks"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 outlines which purpose for audit conclusions?",
+        "options": [
+            "Supporting further audits",
+            "Guiding organizational decision-making",
+            "Fulfilling legal obligations only",
+            "Eliminating evidence gaps"
+        ],
+        "correctAnswer": "Guiding organizational decision-making"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 42001, risk treatment decisions should be based on:",
+        "options": [
+            "AI objectives",
+            "Random choices",
+            "User preferences",
+            "Operational costs"
+        ],
+        "correctAnswer": "AI objectives"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011, which element ensures audit findings are reproducible?",
+        "options": [
+            "Independence",
+            "Objective evidence",
+            "Audit team size",
+            "Confidentiality measures"
+        ],
+        "correctAnswer": "Objective evidence"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 requires which action for AI risk assessment documentation?",
+        "options": [
+            "Storing digitally only",
+            "Retaining documented information",
+            "Limiting documentation to external audits",
+            "Revising annually"
+        ],
+        "correctAnswer": "Retaining documented information"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is a primary role of the audit client in ISO 19011?",
+        "options": [
+            "Ensuring auditor competence",
+            "Providing audit scope only",
+            "Setting document retention policies",
+            "Handling all audit logistics"
+        ],
+        "correctAnswer": "Ensuring auditor competence"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which action supports compliance in AI according to ISO 42001?",
+        "options": [
+            "Regular audits",
+            "Infrequent risk evaluations",
+            "Only financial reporting",
+            "Avoiding stakeholder engagement"
+        ],
+        "correctAnswer": "Regular audits"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, an audit team leader is responsible for:",
+        "options": [
+            "Implementing corrective actions",
+            "Leading the audit team",
+            "External resource allocation",
+            "Market analysis"
+        ],
+        "correctAnswer": "Leading the audit team"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 encourages organizations to implement controls for which AI aspect?",
+        "options": [
+            "Financial management only",
+            "Data quality and integrity",
+            "Limiting innovation",
+            "Minimizing external data usage"
+        ],
+        "correctAnswer": "Data quality and integrity"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which component does ISO 19011 state should be included in an audit report?",
+        "options": [
+            "Audit conclusions",
+            "Market analysis",
+            "Future predictions",
+            "Financial forecasts"
+        ],
+        "correctAnswer": "Audit conclusions"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is a crucial factor in ISO 42001’s approach to AI governance?",
+        "options": [
+            "Enhancing marketing techniques",
+            "Ensuring ethical considerations",
+            "Prioritizing budget constraints",
+            "Reducing technological dependency"
+        ],
+        "correctAnswer": "Ensuring ethical considerations"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 emphasizes which requirement for effective auditor evaluation?",
+        "options": [
+            "In-depth technical skills only",
+            "Meeting competence criteria",
+            "Consistent client feedback",
+            "Legal expertise"
+        ],
+        "correctAnswer": "Meeting competence criteria"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, AI risk treatment should focus on:",
+        "options": [
+            "Continuous improvement",
+            "Short-term financial gains",
+            "Ignoring legal aspects",
+            "Singular focus on automation"
+        ],
+        "correctAnswer": "Continuous improvement"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 requires the AI management system to include what in risk assessments?",
+        "options": [
+            "Minimal documentation",
+            "Assessment of potential impacts",
+            "Only internal risks",
+            "Focus on short-term risk"
+        ],
+        "correctAnswer": "Assessment of potential impacts"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, what is a key factor in establishing audit program objectives?",
+        "options": [
+            "Stakeholder requirements",
+            "Only regulatory compliance",
+            "IT department approval",
+            "Financial savings"
+        ],
+        "correctAnswer": "Stakeholder requirements"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, AI policy must address compliance with:",
+        "options": [
+            "Marketing standards",
+            "Applicable laws and regulations",
+            "Only internal objectives",
+            "Short-term objectives"
+        ],
+        "correctAnswer": "Applicable laws and regulations"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 suggests that which approach enhances the reliability of audit findings?",
+        "options": [
+            "Evidence-based approach",
+            "Cost-reduction strategies",
+            "Marketing goals",
+            "Subjective judgment"
+        ],
+        "correctAnswer": "Evidence-based approach"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which of the following is a critical component of AI management systems in ISO 42001?",
+        "options": [
+            "Public reviews",
+            "Internal policies and controls",
+            "Exclusive focus on customer preferences",
+            "Focus only on financial outcomes"
+        ],
+        "correctAnswer": "Internal policies and controls"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 identifies which of the following as essential for maintaining audit objectivity?",
+        "options": [
+            "Clear objectives",
+            "Independent auditors",
+            "Short audit durations",
+            "Marketing support"
+        ],
+        "correctAnswer": "Independent auditors"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 42001, what is emphasized in the AI system's control environment?",
+        "options": [
+            "Transparency and accountability",
+            "Increased marketing reach",
+            "Minimum documentation",
+            "Short-term profit goals"
+        ],
+        "correctAnswer": "Transparency and accountability"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 promotes what principle to safeguard information obtained during audits?",
+        "options": [
+            "Confidentiality",
+            "Transparency",
+            "Open communication",
+            "Systematic data sharing"
+        ],
+        "correctAnswer": "Confidentiality"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which method is recommended in ISO 42001 for risk management in AI?",
+        "options": [
+            "Automated decision-making",
+            "Risk prioritization and treatment",
+            "Reducing stakeholder engagement",
+            "Outsourcing risk control"
+        ],
+        "correctAnswer": "Risk prioritization and treatment"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011, which factor is vital for setting audit program scope?",
+        "options": [
+            "Audit program objectives",
+            "Total audit costs",
+            "Availability of external auditors",
+            "Budget constraints"
+        ],
+        "correctAnswer": "Audit program objectives"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 mandates that the AI management system be aligned with:",
+        "options": [
+            "Short-term profitability",
+            "Stakeholder expectations",
+            "Minimum risk tolerance",
+            "External technical standards"
+        ],
+        "correctAnswer": "Stakeholder expectations"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, which principle focuses on accurately reporting audit findings?",
+        "options": [
+            "Evidence-based approach",
+            "Due professional care",
+            "Fair presentation",
+            "Impartiality"
+        ],
+        "correctAnswer": "Fair presentation"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 specifies that what type of documentation should be maintained for AI?",
+        "options": [
+            "Detailed AI system information",
+            "Only high-level summaries",
+            "Confidential market data",
+            "Only external feedback records"
+        ],
+        "correctAnswer": "Detailed AI system information"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is a key component of audit planning according to ISO 19011?",
+        "options": [
+            "Objective setting",
+            "Marketing plans",
+            "Limiting report scope",
+            "Financial forecasting"
+        ],
+        "correctAnswer": "Objective setting"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 emphasizes what as a crucial practice in AI management?",
+        "options": [
+            "Adapting to rapid changes",
+            "Ensuring compliance",
+            "Exclusively internal feedback",
+            "Minimizing team involvement"
+        ],
+        "correctAnswer": "Ensuring compliance"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011, audit evidence should be:",
+        "options": [
+            "Verifiable and relevant",
+            "Collected through client approval",
+            "Kept confidential and unpublished",
+            "Analyzed only by stakeholders"
+        ],
+        "correctAnswer": "Verifiable and relevant"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 states that AI management systems should aim to:",
+        "options": [
+            "Provide financial growth",
+            "Enhance ethical practices",
+            "Increase workforce satisfaction",
+            "Limit stakeholder involvement"
+        ],
+        "correctAnswer": "Enhance ethical practices"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, what type of audit program would cover multiple audits over time?",
+        "options": [
+            "Single audit",
+            "Comprehensive audit program",
+            "Joint audit program",
+            "Compliance audit only"
+        ],
+        "correctAnswer": "Comprehensive audit program"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, the AI policy should establish objectives that are:",
+        "options": [
+            "Flexible to all stakeholder needs",
+            "Aligned with organizational goals",
+            "Externally focused",
+            "Minimalistic"
+        ],
+        "correctAnswer": "Aligned with organizational goals"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 specifies that auditors must have which quality?",
+        "options": [
+            "Technical expertise",
+            "Unquestionable loyalty to management",
+            "Marketing skills",
+            "Financial background"
+        ],
+        "correctAnswer": "Technical expertise"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 42001, which area should be assessed regularly for AI system improvement?",
+        "options": [
+            "Public feedback only",
+            "AI system impact and performance",
+            "Employee satisfaction",
+            "Technical specifications"
+        ],
+        "correctAnswer": "AI system impact and performance"
+    },
+    {
+        "question": "Source-ChatGPT4o: What does ISO 19011 recommend regarding audit objectives?",
+        "options": [
+            "Define clear and achievable objectives",
+            "Minimize complexity",
+            "Use only internal objectives",
+            "Set objectives for external approval"
+        ],
+        "correctAnswer": "Define clear and achievable objectives"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 suggests that AI risk management should be integrated with:",
+        "options": [
+            "Environmental standards",
+            "Organizational risk management",
+            "Only IT processes",
+            "Public guidelines"
+        ],
+        "correctAnswer": "Organizational risk management"
+    },
+    {
+        "question": "Source-ChatGPT4o: In ISO 19011, the role of the audit team leader includes:",
+        "options": [
+            "Ensuring that audit objectives are met",
+            "Only approving the audit plan",
+            "Selecting external auditors",
+            "Overseeing marketing efforts"
+        ],
+        "correctAnswer": "Ensuring that audit objectives are met"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 42001, AI policies should address what aspect of compliance?",
+        "options": [
+            "Strict adherence to ethics",
+            "Only external requirements",
+            "Compliance with best practices",
+            "Minimizing internal focus"
+        ],
+        "correctAnswer": "Compliance with best practices"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which of the following is emphasized in ISO 19011 for efficient audits?",
+        "options": [
+            "Independence and competence",
+            "High-cost procedures",
+            "Minimal stakeholder engagement",
+            "Flexible reporting structure"
+        ],
+        "correctAnswer": "Independence and competence"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 stresses that AI system assessments must involve:",
+        "options": [
+            "Exclusively internal audits",
+            "Data quality reviews",
+            "Only financial impacts",
+            "Third-party testing"
+        ],
+        "correctAnswer": "Data quality reviews"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011, which practice ensures reliable audit results?",
+        "options": [
+            "Clear communication",
+            "Focus on quick findings",
+            "Only technical reports",
+            "Reduced information sharing"
+        ],
+        "correctAnswer": "Clear communication"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 states that risk-based approaches should be applied to:",
+        "options": [
+            "Financial projections",
+            "AI compliance controls",
+            "Public relations",
+            "Only marketing plans"
+        ],
+        "correctAnswer": "AI compliance controls"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which of these is essential for audit report accuracy in ISO 19011?",
+        "options": [
+            "Only the most important findings",
+            "Consistent terminology",
+            "Highly technical language",
+            "External reviews"
+        ],
+        "correctAnswer": "Consistent terminology"
+    },
+    {
+        "question": "Source-ChatGPT4o: What is a primary focus of continual improvement in ISO 42001?",
+        "options": [
+            "Enhanced stakeholder transparency",
+            "Cost reduction",
+            "Increasing technical requirements",
+            "Faster project timelines"
+        ],
+        "correctAnswer": "Enhanced stakeholder transparency"
+    },
+    {
+        "question": "Source-ChatGPT4o: According to ISO 19011, auditors should prioritize which method for data collection?",
+        "options": [
+            "Exclusively quantitative data",
+            "Objective and verifiable data",
+            "Employee reviews",
+            "Historical data only"
+        ],
+        "correctAnswer": "Objective and verifiable data"
+    },
+    {
+        "question": "Source-ChatGPT4o: What does ISO 42001 require for AI systems to support accountability?",
+        "options": [
+            "Documentation of decisions and outcomes",
+            "Only qualitative data",
+            "Customer data privacy",
+            "Market alignment only"
+        ],
+        "correctAnswer": "Documentation of decisions and outcomes"
+    },
+    {
+        "question": "Source-ChatGPT4o: Which is a recommended approach in ISO 19011 for audit program management?",
+        "options": [
+            "Setting clear audit objectives",
+            "Regularly replacing audit criteria",
+            "Reducing team size",
+            "Limiting audit scope"
+        ],
+        "correctAnswer": "Setting clear audit objectives"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 42001 encourages integration with other systems to achieve:",
+        "options": [
+            "Cost savings",
+            "Consistent AI governance",
+            "Short-term objectives",
+            "Only external compliance"
+        ],
+        "correctAnswer": "Consistent AI governance"
+    },
+    {
+        "question": "Source-ChatGPT4o: ISO 19011 recommends that audit findings should be based on:",
+        "options": [
+            "Conclusive evidence",
+            "High-level observations",
+            "Internal reports",
+            "Only external validation"
+        ],
+        "correctAnswer": "Conclusive evidence"
+    },
+    {
+        "question": "ISO 42001 emphasizes the importance of which element in AI system governance?",
+        "options": [
+            "Ethical considerations",
+            "Financial incentives",
+            "Public relations",
+            "Corporate branding"
+        ],
+        "correctAnswer": "Ethical considerations"
+    },
+    {
+        "question": "According to ISO 19011, the process of evaluating auditor competence should be:",
+        "options": [
+            "Based on specific audit requirements",
+            "Handled exclusively by external bodies",
+            "Non-essential",
+            "Performed annually"
+        ],
+        "correctAnswer": "Based on specific audit requirements"
+    },
+    {
+        "question": "ISO 42001 specifies that documented information for AI should be:",
+        "options": [
+            "Updated periodically",
+            "Limited to external communications",
+            "Archived only",
+            "Minimal to reduce overhead"
+        ],
+        "correctAnswer": "Updated periodically"
+    },
+    {
+        "question": "Which of these is an essential step in conducting audits per ISO 19011?",
+        "options": [
+            "Establishing a clear audit scope",
+            "Minimizing audit timelines",
+            "Prioritizing marketing data",
+            "Avoiding stakeholder interaction"
+        ],
+        "correctAnswer": "Establishing a clear audit scope"
+    },
+    {
+        "question": "ISO 42001 requires an AI management system to prioritize which type of improvements?",
+        "options": [
+            "Continual and progressive improvements",
+            "Short-term profit-focused improvements",
+            "Reductions in reporting",
+            "Immediate corrective actions only"
+        ],
+        "correctAnswer": "Continual and progressive improvements"
+    },
+    {
+        "question": "According to ISO 19011, an audit report should include:",
+        "options": [
+            "Only significant findings",
+            "Comprehensive audit findings and conclusions",
+            "Marketing results",
+            "Predominantly positive feedback"
+        ],
+        "correctAnswer": "Comprehensive audit findings and conclusions"
+    },
+    {
+        "question": "ISO 42001 encourages integrating AI management systems with:",
+        "options": [
+            "Financial management systems",
+            "Broader organizational systems",
+            "Competitive analysis",
+            "Only IT-based systems"
+        ],
+        "correctAnswer": "Broader organizational systems"
+    },
+    {
+        "question": "Which principle in ISO 19011 ensures auditors report information truthfully?",
+        "options": [
+            "Fair presentation",
+            "Confidentiality",
+            "Evidence-based approach",
+            "Due professional care"
+        ],
+        "correctAnswer": "Fair presentation"
+    },
+    {
+        "question": "In ISO 42001, the AI policy must include a commitment to:",
+        "options": [
+            "Compliance with relevant standards",
+            "Reducing operational complexity",
+            "Employee incentives",
+            "Minimizing technology usage"
+        ],
+        "correctAnswer": "Compliance with relevant standards"
+    },
+    {
+        "question": "ISO 19011 recommends which type of approach to audit planning?",
+        "options": [
+            "Flexible and reactive",
+            "Risk-based",
+            "Marketing-oriented",
+            "Revenue-focused"
+        ],
+        "correctAnswer": "Risk-based"
+    },
+    {
+        "question": "According to ISO 42001, which aspect is crucial in assessing AI risks?",
+        "options": [
+            "Potential impact on stakeholders",
+            "Short-term benefits",
+            "Public perception",
+            "Exclusive focus on compliance"
+        ],
+        "correctAnswer": "Potential impact on stakeholders"
+    },
+    {
+        "question": "ISO 19011 specifies that auditor evaluations should be:",
+        "options": [
+            "Confidential",
+            "Systematic and documented",
+            "Periodic only",
+            "Based on tenure"
+        ],
+        "correctAnswer": "Systematic and documented"
+    },
+    {
+        "question": "Which of the following is a core value in ISO 42001 for effective AI governance?",
+        "options": [
+            "Transparency",
+            "Profit maximization",
+            "Minimal documentation",
+            "External dependency"
+        ],
+        "correctAnswer": "Transparency"
+    },
+    {
+        "question": "What is a key factor in selecting audit methods according to ISO 19011?",
+        "options": [
+            "Audit scope and complexity",
+            "Client satisfaction",
+            "Auditor preferences",
+            "Budget constraints"
+        ],
+        "correctAnswer": "Audit scope and complexity"
+    },
+    {
+        "question": "ISO 42001 requires that AI-related risk assessments be:",
+        "options": [
+            "Detailed and consistent",
+            "Short and infrequent",
+            "Handled only by external parties",
+            "Focused solely on financial impacts"
+        ],
+        "correctAnswer": "Detailed and consistent"
+    },
+    {
+        "question": "In ISO 19011, auditors are encouraged to handle information obtained during audits with:",
+        "options": [
+            "Confidentiality",
+            "Transparency",
+            "Public accessibility",
+            "Selective sharing"
+        ],
+        "correctAnswer": "Confidentiality"
+    },
+    {
+        "question": "ISO 42001 suggests that organizations monitor AI system performance to:",
+        "options": [
+            "Ensure ongoing effectiveness",
+            "Enhance external visibility",
+            "Minimize technology costs",
+            "Focus on competitive metrics"
+        ],
+        "correctAnswer": "Ensure ongoing effectiveness"
+    },
+    {
+        "question": "What should be included in an audit report per ISO 19011?",
+        "options": [
+            "Audit objectives and findings",
+            "Predominantly financial metrics",
+            "External feedback",
+            "Unverified data"
+        ],
+        "correctAnswer": "Audit objectives and findings"
+    },
+    {
+        "question": "According to ISO 42001, AI risk assessment should consider:",
+        "options": [
+            "Potential ethical implications",
+            "Immediate profits",
+            "Exclusive technical issues",
+            "Only legal risks"
+        ],
+        "correctAnswer": "Potential ethical implications"
+    },
+    {
+        "question": "ISO 19011 suggests that the audit plan must be prepared with consideration for:",
+        "options": [
+            "Audit objectives and scope",
+            "Only the organization’s growth targets",
+            "Stakeholder preferences",
+            "Flexible timelines"
+        ],
+        "correctAnswer": "Audit objectives and scope"
+    }
 ];
 </script>
 <script>
